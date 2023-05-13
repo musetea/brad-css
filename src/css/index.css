@@ -1,0 +1,33 @@
+h1 {
+	color: orange;
+	text-align: center;
+}
+
+header p {
+	color: green;
+}
+
+header p span {
+	color: blue;
+}
+
+.highlight {
+	background-color: yellow;
+}
+
+footer .highlight {
+	background-color: lightgray;
+}
+
+/* clearfix method */
+.group::before,
+.group::after {
+	content: "";
+	display: table;
+}
+.group::after {
+	clear: both;
+}
+.group {
+	zoom: 1;
+}

@@ -1,0 +1,16 @@
+// mixin
+@mixin verticalGradient($fromColor, $toColor) {
+	background-image: linear-gradient(to bottom, $fromColor, $toColor);
+}
+
+@mixin bp-480 {
+	@media only screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin bp-1240 {
+	@media only screen and (min-width: 1024px) {
+		@content;
+	}
+}

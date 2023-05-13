@@ -1,0 +1,141 @@
+html {
+	background-color: #869960;
+}
+body {
+	font-family: "Tohoma", sans-serif;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* image banner overlay */
+.image-banner {
+	position: relative;
+}
+.image-banner img {
+	display: block;
+}
+.banner-description {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 10px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+header {
+	padding-top: 40px;
+	/* padding-bottom: 20px; */
+	color: #617140;
+	background-image: url("./images/flower.jpg");
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+.header-area {
+	width: 30%;
+	float: left;
+}
+
+header h1 {
+	margin: 0;
+}
+header p {
+	margin: 0;
+}
+
+/* Navigation Menu Start */
+
+nav {
+	width: 70%;
+	float: left;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	list-style: none;
+	float: left;
+	margin-right: 5px;
+}
+nav a {
+	display: block;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #617140;
+	border: 3px solid #e5e9dc;
+	background-color: #fff;
+}
+nav a:hover {
+	background-color: #e5e9dc;
+}
+
+/* End navigation */
+
+.container {
+	max-width: 1024px;
+	margin-left: auto; /* 가운데 정렬 */
+	margin-right: auto;
+	box-sizing: border-box;
+	/* background-color: #fff;
+	background-image: url("./images/color-tile.png");
+	background-repeat: repeat-x; */
+	padding-left: 40px;
+	padding-right: 40px;
+
+	background: url("./images/color-tile.png") left bottom repeat-x,
+		#fff url("./images/color-tile.png") left top repeat-x;
+}
+
+.content-area {
+	border-top: 3px solid #e5e9dc;
+	border-bottom: 3px solid #e5e9dc;
+}
+
+main {
+	width: 66%;
+	float: left;
+	padding-right: 40px;
+	box-sizing: border-box;
+}
+
+aside {
+	width: 34%;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+	/* 같이 사용하는 이유 linear-gradient() 지원안할경우 백그라운드 색상 사용 */
+	background-color: #e5e9dc;
+	background-image: linear-gradient(to bottom, #e5e9dc, #fff);
+}
+
+footer {
+	text-align: center;
+	font-size: 85%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding: 20px 0;
+	color: gray;
+}
+
+.fix {
+	clear: both;
+}
+/* clearfix method */
+.group::before,
+.group::after {
+	content: "";
+	display: table;
+}
+.group::after {
+	clear: both;
+}
+.group {
+	zoom: 1;
+}

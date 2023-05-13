@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/layout.css" />
+		<style>
+			form {
+				background-color: #ececec;
+				padding: 30px 40px;
+			}
+
+			/* 감춤 */
+			.hidden-label {
+				position: absolute;
+				width: 0;
+				height: 0;
+				overflow: hidden;
+				visibility: hidden;
+			}
+
+			input,
+			select {
+				font-family: "Tahoma", sans-serif;
+				font-size: 100%;
+				outline: none;
+			}
+			select {
+				-webkit-appearance: none;
+				-webkit-border-radius: 0;
+				border-radius: 0;
+			}
+
+			/* text, number, tel */
+			input[type="email"],
+			input[type="password"],
+			select {
+				display: block;
+				padding: 0 10px;
+				width: 100%;
+				height: 40px;
+				box-sizing: border-box;
+				margin-bottom: 10px;
+				border: 1px solid #ccc;
+			}
+
+			input[type="email"]:focus,
+			input[type="email"]:hover,
+			input[type="password"]:focus,
+			input[type="password"]:hover,
+			select:focus,
+			select:hover {
+				border: 1px solid #869960;
+				box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0, 15);
+			}
+
+			input[type="submit"] {
+				display: block;
+				width: 100%;
+				box-sizing: border-box;
+				background-color: #869960;
+				padding: 10px;
+				color: #fff;
+				border: 1px solid #798a56;
+				border-radius: 5px;
+				margin-bottom: 10px;
+			}
+			input[type="submit"]:hover,
+			input[type="submit"]:focus {
+				background-color: #798a56;
+				border: 1px solid #535e3b;
+			}
+
+			.checkbox-text {
+				font-size: 85%;
+				color: #777;
+			}
+		</style>
+		<title>Layout Float</title>
+	</head>
+	<body>
+		<div class="container">
+			<header class="group">
+				<div class="header-area">
+					<h1>Website Title</h1>
+					<p>Website slogan included here.</p>
+				</div>
+				<nav>
+					<ul class="group">
+						<li><a href="./index.html">Home</a></li>
+						<li><a href="./layout.html">Layout</a></li>
+						<li><a href="./tables.html">Table</a></li>
+						<li><a href="./forms.html">Form's</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="./birds.html">Bird's</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="content-area group">
+				<main>
+					<p>
+						This is the main area (or column). Lorem ipsum dolor sit amet
+						consectetur adipisicing elit. Sint eaque ipsam velit sequi, dolorum
+						mollitia quas excepturi in, obcaecati vero veniam consectetur
+						dignissimos necessitatibus quaerat! A voluptas possimus tempore
+						expedita.
+					</p>
+					<form action="" class="form">
+						<label for="email" class="hidden-label">Email</label>
+						<input type="email" name="" id="email" placeholder="Email" />
+						<label for="password" class="hidden-label">Password</label>
+						<input
+							type="password"
+							name="password"
+							id="password"
+							placeholder="Password"
+						/>
+						<select name="" id="">
+							<option value="">Initially view...</option>
+							<option value="">My Profile</option>
+							<option value="">Inbox</option>
+							<option value="">Account Settings</option>
+						</select>
+						<input type="submit" value="Sign In" />
+						<label>
+							<input
+								type="checkbox"
+								name="remember"
+								checked="checked"
+								value="yes"
+								id="stay"
+							/>
+							<span class="checkbox-text">Stay Signed in</span>
+						</label>
+					</form>
+
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa,
+						neque! Fugiat deleniti distinctio, sunt beatae nostrum, alias omnis
+						nisi maxime saepe dicta, a laborum non recusandae veritatis
+						perspiciatis porro labore.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos
+						officiis veniam deserunt debitis aspernatur iste assumenda ducimus,
+						hic asperiores fugiat consequatur ipsam maxime praesentium
+						provident? Hic culpa aspernatur nulla ullam?
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos
+						officiis veniam deserunt debitis aspernatur iste assumenda ducimus,
+						hic asperiores fugiat consequatur ipsam maxime praesentium
+						provident? Hic culpa aspernatur nulla ullam?
+					</p>
+				</main>
+				<aside>
+					<p>
+						This is sidebar. Lorem ipsum dolor sit amet consectetur adipisicing
+						elit. Modi temporibus repellat inventore labore sed, nam, odit et
+						expedita dolor voluptatem rerum, omnis sit soluta magnam
+						perspiciatis laboriosam delectus! Distinctio, tempore!
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ut
+						omnis architecto incidunt tenetur eligendi. Iusto animi aspernatur
+						atque repudiandae, dolorem veritatis maxime quaerat sapiente
+						excepturi nulla minima magnam. Consectetur.
+					</p>
+				</aside>
+
+				<!-- <div class="fix"></div> -->
+			</div>
+			<footer>&copy; 2023 - This is th footer.</footer>
+		</div>
+	</body>
+</html>

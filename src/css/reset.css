@@ -1,0 +1,50 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+/* clearfix method */
+.row::before,
+.row::after,
+.group::before,
+.group::after {
+	content: "";
+	display: table;
+}
+.row::after,
+.group::after {
+	clear: both;
+}
+.row,
+.group {
+	zoom: 1;
+}

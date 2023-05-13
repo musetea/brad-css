@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/layout.css" />
+		<style>
+			.birds {
+				background-color: #c2bbb1;
+				text-align: center;
+				padding: 100px 0;
+				background-image: url("../../css//images/bird.jpg");
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+
+			.ui ul {
+				margin: 0;
+				padding: 0;
+			}
+			.ui li {
+				float: left;
+				list-style: none;
+				margin-right: 20px;
+			}
+
+			.ui a {
+				display: block;
+				text-decoration: none;
+				width: 50px;
+				height: 50px;
+				background-image: url("../../css/images/sprites.png");
+				/* 텍스트 감춤 */
+				text-indent: -1000px;
+			}
+
+			.ui-home {
+				background-position-x: 0px;
+				background-position-y: 0px;
+			}
+			.ui-home:hover {
+				background-position-x: 50px;
+				background-position-y: 0px;
+			}
+			.ui-profile {
+				background-position-x: 0px;
+				background-position-y: -50px;
+			}
+			.ui-profile:hover {
+				background-position-x: 50px;
+				background-position-y: -50px;
+			}
+			.ui-settings {
+				background-position-x: 0px;
+				background-position-y: -100px;
+			}
+			.ui-settings:hover {
+				background-position-x: 50px;
+				background-position-y: -100px;
+			}
+		</style>
+		<title>Layout Float</title>
+	</head>
+	<body>
+		<div class="container">
+			<header class="group">
+				<div class="header-area">
+					<h1>Website Title</h1>
+					<p>Website slogan included here.</p>
+				</div>
+				<nav>
+					<ul class="group">
+						<li><a href="./index.html">Home</a></li>
+						<li><a href="./layout.html">Layout</a></li>
+						<li><a href="./tables.html">Table</a></li>
+						<li><a href="./forms.html">Form's</a></li>
+						<li><a href="./typography.html">Typography</a></li>
+						<li><a href="./birds.html">Bird's</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="content-area group">
+				<main>
+					<h2>Main Column heading</h2>
+					<div class="ui">
+						<ul class="group">
+							<li><a href="#" class="ui-home">Home</a></li>
+							<li><a href="#" class="ui-profile">Profile</a></li>
+							<li><a href="#" class="ui-settings">Settings</a></li>
+						</ul>
+					</div>
+					<p>
+						This is the main area (or column). Lorem ipsum dolor sit amet
+						consectetur adipisicing elit. Sint eaque ipsam velit sequi, dolorum
+						mollitia quas excepturi in, obcaecati vero veniam consectetur
+						dignissimos necessitatibus quaerat! A voluptas possimus tempore
+						expedita.
+					</p>
+					<div class="birds"></div>
+
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa,
+						neque! Fugiat deleniti distinctio, sunt beatae nostrum, alias omnis
+						nisi maxime saepe dicta, a laborum non recusandae veritatis
+						perspiciatis porro labore.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos
+						officiis veniam deserunt debitis aspernatur iste assumenda ducimus,
+						hic asperiores fugiat consequatur ipsam maxime praesentium
+						provident? Hic culpa aspernatur nulla ullam?
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos
+						officiis veniam deserunt debitis aspernatur iste assumenda ducimus,
+						hic asperiores fugiat consequatur ipsam maxime praesentium
+						provident? Hic culpa aspernatur nulla ullam?
+					</p>
+				</main>
+				<aside>
+					<p>
+						This is sidebar. Lorem ipsum dolor sit amet consectetur adipisicing
+						elit. Modi temporibus repellat inventore labore sed, nam, odit et
+						expedita dolor voluptatem rerum, omnis sit soluta magnam
+						perspiciatis laboriosam delectus! Distinctio, tempore!
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ut
+						omnis architecto incidunt tenetur eligendi. Iusto animi aspernatur
+						atque repudiandae, dolorem veritatis maxime quaerat sapiente
+						excepturi nulla minima magnam. Consectetur.
+					</p>
+				</aside>
+
+				<!-- <div class="fix"></div> -->
+			</div>
+			<footer>&copy; 2023 - This is th footer.</footer>
+		</div>
+	</body>
+</html>

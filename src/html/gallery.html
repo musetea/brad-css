@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/screen.css" />
+		<!-- <script src="../js/toggle.js"></script> -->
+		<script></script>
+		<style>
+			.form-row {
+				padding: 10px 0;
+				display: flex;
+			}
+			.form-row label {
+				flex: 1;
+				text-align: right;
+			}
+			.form-row input {
+				flex: 5;
+			}
+
+			.column-area {
+				padding: 10px 0;
+				/* display: flex; */
+				/* flex-wrap: nowrap; */
+			}
+			.column-area .side-one {
+				flex: 1;
+			}
+			.column-area img {
+				flex: 3;
+			}
+			.column-area .side-two {
+				flex: 1;
+			}
+
+			.features {
+				padding: 10px 40px;
+				display: flex;
+				/* flex-direction: column; */
+				gap: 16px;
+			}
+			.feature1,
+			.feature2,
+			.feature3 {
+				padding: 10px 20px;
+				flex: 1;
+			}
+			.feature1 {
+				background-color: rgb(63, 175, 138);
+			}
+
+			.feature2 {
+				background-color: rgb(122, 185, 97);
+			}
+
+			.feature3 {
+				background-color: rgb(139, 119, 158);
+			}
+
+			.box-area {
+				display: flex;
+				justify-content: space-between;
+				gap: 1rem;
+			}
+
+			.box {
+				margin-bottom: 30px;
+				padding: 20px 20px 0 20px;
+				border: 2px solid #d3dee7;
+				background-color: #e7eff5;
+				box-shadow: 2px 5px 2.5px rgba(0, 0, 0, 0.15);
+				flex: 1;
+				/* opacity: 0; */
+				animation-fill-mode: forwards;
+				animation-name: fadeBounce;
+				animation-duration: 1s;
+			}
+			.box-a {
+				animation-delay: 0;
+			}
+			.box-b {
+				animation-delay: 0.5s;
+			}
+			.box-c {
+				animation-delay: 1s;
+			}
+			.box-d {
+				animation-delay: 1.5s;
+			}
+
+			.banner {
+				position: relative;
+				margin-bottom: 20px;
+				overflow: hidden;
+			}
+
+			.birds {
+				display: block;
+				transition-property: all;
+				transition-duration: 1s;
+			}
+
+			.banner:hover img {
+				transform: scale(1.5);
+			}
+
+			.banner:hover .banner-desc {
+				transform: translateY(0);
+			}
+
+			.banner-desc {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				color: #fff;
+				background-color: rgba(0, 0, 0, 0.4);
+				transition-property: all;
+				transition-duration: 1s;
+				transform: translateY(100%);
+			}
+
+			.box-one {
+				width: 200px;
+				height: 200px;
+				line-height: 200px;
+				background-color: #ccc;
+				text-align: center;
+				/* 동그라미 모양만들기 */
+				border-radius: 50%;
+				transition: all 1s;
+				transition-timing-function: ease-in-out;
+			}
+			.box-one:hover {
+				transform: rotate(360deg);
+				color: rgb(185, 45, 143);
+			}
+
+			@keyframes fadeBounce {
+				0% {
+					opacity: 0;
+					transform: translateY(-200%);
+				}
+				40% {
+					transform: translateY(0);
+				}
+				55% {
+					transform: translateY(-6px);
+				}
+				70% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+				85% {
+					transform: translateY(-3px);
+				}
+
+				100% {
+					transform: translateY(0);
+				}
+			}
+
+			/* star */
+			@keyframes slideSpin {
+				0% {
+				}
+				50% {
+					transform: translateX(150%) scale(0.5);
+				}
+				75% {
+					transform: translateX(150%) rotate(180deg) scale(0.5);
+				}
+				100% {
+					transform: translateX(300%) rotate(180deg);
+				}
+			}
+			.star {
+				width: 25%;
+				height: auto;
+				animation: slideSpin 2s;
+				/* 애니메이션 */
+				animation-fill-mode: forwards;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+			}
+		</style>
+		<title>Link's</title>
+
+		<style>
+			.toggle-btn {
+				display: none;
+			}
+			.toggle-btn-visible {
+				display: block;
+			}
+			.toggle-target-hidden {
+				display: none;
+			}
+			.toggle-target-expanded {
+				display: block;
+			}
+		</style>
+
+		<style>
+			.thumbnails {
+				margin-right: -15px;
+			}
+			.thumbnails a {
+				width: 25%;
+				float: left;
+				padding-right: 15px;
+				margin-bottom: 15px;
+				box-sizing: border-box;
+			}
+			.thumbnails a img {
+				width: 100%;
+				height: auto;
+				display: block;
+				object-fit: cover;
+				transition: all 1s ease-in-out;
+			}
+
+			.thumbnails:hover img {
+				opacity: 0.6;
+			}
+
+			.thumbnails img:hover {
+				opacity: 1;
+				transform: scale(1.05) rotate(2deg);
+				box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>Website Title</h1>
+				<p>Website slogan included here.</p>
+				<!-- 메뉴 -->
+				<span data-toggle-target=".nav" class="toggle-btn">MENU</span>
+				<nav class="nav">
+					<ul class="group">
+						<li><a href="./index.html" class="" id="">Home</a></li>
+						<li><a href="./response.html" class="" id="">Response</a></li>
+						<li><a href="./grid.html" class="" id="">Grid</a></li>
+						<li><a href="./flexBox.html" class="" id="">FlexBox</a></li>
+						<li><a href="./links.html" class="" id="">Links</a></li>
+						<li>
+							<a href="./gallery.html" class="active" id="">Photo Gallery</a>
+						</li>
+						<li><a href="#" class="" id="">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- 메인영역 -->
+		<main class="group">
+			<div class="container group">
+				<div class="main-area">
+					<div class="gallery">
+						<div class="row">
+							<div class="col col-md-8">
+								<h2>Main Column Heading</h2>
+								<div class="thumbnails group">
+									<a href=""><img src="../../css/images/bird.jpg" alt="" /></a>
+									<a href=""><img src="../../css/images/tree.jpeg" alt="" /></a>
+									<a href=""
+										><img src="../../css/images/forest.jpeg" alt=""
+									/></a>
+									<a href=""><img src="../../css/images/book.jpeg" alt="" /></a>
+									<a href=""><img src="../../css/images/boy.jpeg" alt="" /></a>
+									<a href=""><img src="../../css/images/cat.jpeg" alt="" /></a>
+									<a href=""><img src="../../css/images/moon.jpeg" alt="" /></a>
+									<a href=""
+										><img src="../../css/images/mountains.webp" alt=""
+									/></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="info-box">
+						<p>
+							<strong
+								>This content is not absolutely vital and does not need to
+								display on mobile devices</strong
+							>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+							Explicabo dicta libero non voluptatibus praesentium magnam
+							voluptatem culpa. Quisquam dolor optio aut explicabo officia
+							quaerat, dolorum a maiores quia accusamus nesciunt.
+						</p>
+					</div>
+					<div class="column-area">
+						<p class="side-one">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+							provident sequi eum, ipsam porro, praesentium veritatis quia dicta
+							ipsum doloribus cumque reprehenderit labore sunt quis accusamus
+							deserunt odit maiores commodi.
+						</p>
+						<div class="banner">
+							<img src="../../css/images/bird.jpg" alt="Birds" class="birds" />
+							<div class="banner-desc">
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Excepturi nesciunt, qui necessitatibus beatae rem vitae, eum,
+									quisquam fugit quidem corrupti nam accusantium in id porro
+									corporis. Blanditiis rem culpa ut?
+								</p>
+							</div>
+						</div>
+						<p class="side-two">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+							itaque est suscipit quaerat nesciunt voluptatibus, omnis officia.
+							Ab
+						</p>
+					</div>
+					<p>
+						delectus ea minus. Illo optio eos asperiores in porro quibusdam
+						quaerat doloribus.
+					</p>
+				</div>
+				<aside class="sidebar">
+					<p>
+						This is th sidebar. Lorem ipsum dolor sit amet consectetur
+						adipisicing elit. Animi mollitia ducimus et praesentium esse quo ut?
+						Exercitationem perspiciatis esse saepe aut est reiciendis. Cumque,
+						delectus nobis laborum earum ad voluptatum?
+					</p>
+					<div class="box-one">
+						<p>Circle</p>
+					</div>
+				</aside>
+			</div>
+			<div class="features">
+				<div class="feature1">
+					<h4>Feature 1</h4>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
+					ratione blanditiis rerum alias repellat, accusantium incidunt ea
+					consectetur quas. Repellat ullam vitae commodi iusto dolores.
+					Necessitatibus ratione sit voluptatum architecto?
+				</div>
+				<div class="feature2">
+					<h4>Featrue 2</h4>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
+					ratione blanditiis rerum alias repellat, accusantium incidunt ea
+					consectetur quas. Repellat ullam vitae commodi iusto dolores.
+					Necessitatibus ratione sit voluptatum architecto?
+					<p>
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Consequuntur fugit iure cupiditate sit culpa voluptatum quasi id
+						reprehenderit. Molestiae quos ratione vitae accusantium nobis soluta
+						excepturi reprehenderit explicabo quod ipsum!
+					</p>
+				</div>
+				<div class="feature3">
+					<h4>Feature 3</h4>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt
+					ratione blanditiis rerum alias repellat, accusantium incidunt ea
+					consectetur quas. Repellat ullam vitae commodi iusto dolores.
+					Necessitatibus ratione sit voluptatum architecto?
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<p>&copy; 2023 - This is the footer.</p>
+		</footer>
+	</body>
+</html>

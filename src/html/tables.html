@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/layout.css" />
+		<style>
+			/* Table */
+			table.grocery-list{
+				width: 100%;
+				border-spacing: 0;
+				border-collapse: collapse;
+			}
+			table.grocery-list th{
+				text-align: left;
+				background-color: #869960;
+				color: #fff;
+				text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+			}
+
+			.grocery-list .col-name{
+				width: 60%;
+			}
+			.grocery-list .col-quantity, 
+			.grocery-list .con-price{
+				width: 20%;
+			}
+
+
+			table.grocery-list th,
+			table.grocery-list td{
+				border: 1px solid #869960;
+				padding: 5px 10px;
+			}
+
+			table.grocery-list tbody tr:nth-child(odd) td{
+				background-color: #e5e9dc;
+			}
+
+			table.grocery-list tr :nth-child(2),
+			table.grocery-list tr :nth-child(3){
+				text-align: center;
+			}
+
+		</style>
+		<title>Tables</title>
+	</head>
+	<body>
+		<div class="container">
+			<header class="group">
+				<div class="header-area">
+					<h1>Website Title</h1>
+					<p>Website slogan included here.</p>
+				</div>
+				<nav>
+					<ul class="group">
+						<li><a href="./index.html">Home</a></li>
+						<li><a href="./layout.html">Layout</a></li>
+						<li><a href="./tables.html">Table</a></li>
+						<li><a href="./forms.html">Form's</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="./birds.html">Bird's</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div class="content-area group">
+				<main>
+					<p>
+						This is the main area (or column). Lorem ipsum dolor sit amet
+						consectetur adipisicing elit. Sint eaque ipsam velit sequi, dolorum
+						mollitia quas excepturi in, obcaecati vero veniam consectetur
+						dignissimos necessitatibus quaerat! A voluptas possimus tempore
+						expedita.
+					</p>
+					<table class="grocery-list">
+						<thead>
+							<tr>
+								<th class="col-name">Item Name</th>
+								<th class="col-quantity">Quantity</th>
+								<th class="col-price">Price</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Oranges</td>
+								<td>5</td>
+								<td>$3.00</td>
+							</tr>
+							<tr>
+								<td>Celery</td>
+								<td>2</td>
+								<td>$2.50</td>
+							</tr>
+							<tr>
+								<td>Garlic</td>
+								<td>2</td>
+								<td>$1.90</td>
+							</tr>
+							<tr>
+								<td>Bananas</td>
+								<td>6</td>
+								<td>$2.99</td>
+							</tr>
+							<tr>
+								<td>Onions</td>
+								<td>4</td>
+								<td>$3.00</td>
+							</tr>
+							<tr>
+								<td>Very long awkwardly named yet Still delicious item here</td>
+								<td>4</td>
+								<td>$3.00</td>
+							</tr>
+							<tr>
+								<td>Carrots</td>
+								<td>1</td>
+								<td>$3.99</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa,
+						neque! Fugiat deleniti distinctio, sunt beatae nostrum, alias omnis
+						nisi maxime saepe dicta, a laborum non recusandae veritatis
+						perspiciatis porro labore.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos
+						officiis veniam deserunt debitis aspernatur iste assumenda ducimus,
+						hic asperiores fugiat consequatur ipsam maxime praesentium
+						provident? Hic culpa aspernatur nulla ullam?
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos
+						officiis veniam deserunt debitis aspernatur iste assumenda ducimus,
+						hic asperiores fugiat consequatur ipsam maxime praesentium
+						provident? Hic culpa aspernatur nulla ullam?
+					</p>
+				</main>
+				<aside>
+					<p>
+						This is sidebar. Lorem ipsum dolor sit amet consectetur adipisicing
+						elit. Modi temporibus repellat inventore labore sed, nam, odit et
+						expedita dolor voluptatem rerum, omnis sit soluta magnam
+						perspiciatis laboriosam delectus! Distinctio, tempore!
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ut
+						omnis architecto incidunt tenetur eligendi. Iusto animi aspernatur
+						atque repudiandae, dolorem veritatis maxime quaerat sapiente
+						excepturi nulla minima magnam. Consectetur.
+					</p>
+				</aside>
+
+				<!-- <div class="fix"></div> -->
+			</div>
+			<footer>&copy; 2023 - This is th footer.</footer>
+	</body>
+</html>
